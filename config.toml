@@ -1,0 +1,33 @@
+# postgres 数据库配置
+[postgres]
+# 连接地址
+host = "127.0.0.1"
+# 连接端口
+port = 5432
+# 用户名
+user = "petter"
+# 密码
+password = "123456"
+# 数据库
+db_name = "huobi"
+# SSL模式
+ssl_mode = "disable"
+# 最长等待断开时间(单位: 秒), 如果该值为 0, 则不限制时间
+max_lifetime = 0
+# 最多打开数据库的连接数量, 如果该值为 0, 则不限制连接数量
+max_open_conns = 10
+# 连接池中最多空闲链接数量, 如果该值为 0, 则不保留空闲链接
+max_idle_conns = 10
+
+# gorm 配置
+[gorm]
+# 日志等级 1-Silent, 2-Error, 3-Warn, 4-Info
+log_level = 3
+# 数据库表名前缀
+# table_prefix = ""
+# 使用单数表名
+singular_table = false
+
+# 订阅
+[server]
+subscribes = "xrpusdt:1600,ethusdt:1601,btcusdt:1602"
